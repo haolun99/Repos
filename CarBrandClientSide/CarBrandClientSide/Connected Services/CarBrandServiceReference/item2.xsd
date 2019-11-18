@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServiceProject" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServiceProject" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCarBrand">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CarBrand" nillable="true" type="tns:CarBrand" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarBrand" nillable="true" type="tns:ArrayOfCarBrand" />
+  <xs:complexType name="CarBrand">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BrandName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Price" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarBrand" nillable="true" type="tns:CarBrand" />
+</xs:schema>
